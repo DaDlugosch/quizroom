@@ -7,7 +7,7 @@
 
   .download-link {
   	font-weight: 400;
-    padding: 0.5rem;
+    padding: 0.5rem 1rem;
     background-color: transparent;
     border: 2px solid $quiz-orange;
     text-transform: uppercase;
@@ -19,6 +19,10 @@
       background-color: $quiz-orange;
       color: $quiz-green;
       text-decoration: none;
+    }
+
+    @media (max-width: 350px) {
+      padding: 0.1rem;
     }
   }
 }

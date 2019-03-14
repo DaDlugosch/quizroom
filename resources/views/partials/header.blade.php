@@ -12,11 +12,11 @@
 		<div class="container d-flex justify-content-between align-items-center">
 			@if(!empty($logo))
 			<figure class="mb-0">
-				<a href="/"><img src="{{ $logo['url'] }}" alt="{{ $logo['alt'] }}" width="30%"></a>
+				<a href="/"><img src="{{ $logo['url'] }}" alt="{{ $logo['alt'] }}" width="50rem"></a>
 			</figure>
 			@endif
 			@if(!empty($text) && !empty($file))
-			<a href="{{ $file }}" class="download-link" download="quizroom">{{ $text }}</a>
+			<a href="{{ $file }}" class="download-link" download="quizroom">{!! $text !!}</a>
 			@endif
 		</div>
 	</div>

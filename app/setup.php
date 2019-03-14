@@ -72,6 +72,18 @@ add_action('after_setup_theme', function () {
     add_editor_style(asset_path('styles/main.css'));
 }, 20);
 
+if( function_exists('acf_add_options_page') ) {
+
+    acf_add_options_page(array(
+            'page_title'    => 'Nastavenia témy',
+            'menu_title'    => 'Nastavenia témy',
+            'menu_slug'     => 'theme-settings',
+            'capability'    => 'edit_posts',
+            'redirect'      => false
+        ));
+
+}
+
 /**
  * Register sidebars
  */

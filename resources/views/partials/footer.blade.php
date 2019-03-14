@@ -1,5 +1,9 @@
-<footer class="content-info">
+@php
+	$text = get_field('copyright', 'option');
+@endphp
+
+<footer>
   <div class="container">
-    @php dynamic_sidebar('sidebar-footer') @endphp
+    {!! $text !!}
   </div>
 </footer>

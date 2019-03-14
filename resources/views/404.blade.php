@@ -1,12 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-  @include('partials.page-header')
-
-  @if (!have_posts())
-    <div class="alert alert-warning">
-      {{ __('Sorry, but the page you were trying to view does not exist.', 'sage') }}
+    <div class="alert alert-warning my-5">
+      {{ __('Prepáčte, ale stránka, ktorú sa pokúšate zobraziť, neexistuje.', 'sage') }}
     </div>
-    {!! get_search_form(false) !!}
-  @endif
 @endsection

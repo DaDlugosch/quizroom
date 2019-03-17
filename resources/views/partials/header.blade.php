@@ -2,12 +2,11 @@
 	$image = get_field('bg_image', 'option');
 	$logo = get_field('logo', 'option');
 	$text = get_field('download_button', 'option');
-	$file = get_field('download_file', 'option');
 	$heading = get_field('main_heading', 'option');
 @endphp
 
 <header>
-	@if(!empty($logo) || (!empty($text) && !empty($file)))
+	@if(!empty($logo) || !empty($text))
 	<div class="navigation d-flex">
 		<div class="container d-flex justify-content-between align-items-center">
 			@if(!empty($logo))
@@ -15,8 +14,8 @@
 				<a href="/"><img src="{{ $logo['url'] }}" alt="{{ $logo['alt'] }}" width="50rem"></a>
 			</figure>
 			@endif
-			@if(!empty($text) && !empty($file))
-			<a href="{{ $file }}" class="download-link" download="quizroom">{!! $text !!}</a>
+			@if(!empty($text))
+			<a href="#download" class="download-link">{!! $text !!}</a>
 			@endif
 		</div>
 	</div>

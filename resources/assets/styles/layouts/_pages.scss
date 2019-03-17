@@ -1,0 +1,12 @@
+.download {
+	section {
+		display: flex;
+		flex-direction: column;
+		padding: 5rem 0;
+
+		a {
+			margin-top: 1rem;
+			align-self: center;
+		}
+	}
+}

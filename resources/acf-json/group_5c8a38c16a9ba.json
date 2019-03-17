@@ -105,25 +105,6 @@
             "maxlength": ""
         },
         {
-            "key": "field_5c8a3944e654c",
-            "label": "Súbor na stiahnutie",
-            "name": "download_file",
-            "type": "file",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "return_format": "url",
-            "library": "all",
-            "min_size": "",
-            "max_size": "",
-            "mime_types": ""
-        },
-        {
             "key": "field_5c8a38c7e6547",
             "label": "Pätička",
             "name": "",
@@ -188,5 +169,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1552563300
+    "modified": 1552856935
 }

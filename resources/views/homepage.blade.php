@@ -10,8 +10,8 @@
 		$heading = get_field('heading');
 		$text = get_field('text_about');
 		$logo = get_field('logo', 'option');
+		$download = get_field('download_heading');
 		$windows_heading = get_field('windows_heading');
-		$windows_text = get_field('windows_text');
 		$windows_file = get_field('windows_file');
 		$mac_heading = get_field('mac_heading');
 		$mac_text = get_field('mac_text');
@@ -33,21 +33,29 @@
 		</section>
 		@endif
 	</div>
+	@if(!empty($windows_file) || !empty($mac_file) || !empty($linux_file))
 	<div class="offset" id="download"></div>
-	<h1><span class="green">Na</span> <span class="orange">stiahnutie</span></h1>
+	<h1 class="text-center text-md-left mt-4">{!! $download !!}</h1>
 	<div class="download row">
-		<section class="col-md-4">
+		@if(!empty($windows_file))
+		<section class="@if(empty($mac_file) && empty($linux_file))col-md-12 @endif @if((empty($mac_file) && !empty($linux_file)) || (!empty($mac_file) && empty($linux_file)))col-md-6 @endif @if(!empty($mac_file) && !empty($linux_file))col-md-4 @endif">
 			<h2 class="text-center">{{ $windows_heading }}</h2>
-			<a href="{{ $windows_file }}" class="download-link" download="QuizRoom-Win">{{ $windows_text }}</a>
+			<a href="{{ $windows_file }}" class="download-link" download="QuizRoom-Win">{{ get_field('windows_text') }}</a>
 		</section>
-		<section class="col-md-4">
+		@endif
+		@if(!empty($mac_file))
+		<section class="@if(empty($windows_file) && empty($linux_file))col-md-12 @endif @if((empty($windows_file) && !empty($linux_file)) || (!empty($windows_file) && empty($linux_file)))col-md-6 @endif @if(!empty($windows_file) && !empty($linux_file))col-md-4 @endif">
 			<h2 class="text-center">{{ $mac_heading }}</h2>
 			<a href="{{ $mac_file }}" class="download-link" download="QuizRoom-Mac">{{ $mac_text }}</a>
 		</section>
-		<section class="col-md-4">
+		@endif
+		@if(!empty($linux_file))
+		<section class="@if(empty($mac_file) && empty($windows_file))col-md-12 @endif @if((!empty($mac_file) && empty($windows_file)) || (!empty($mac_file) && empty($windows_file)))col-md-6 @endif @if(!empty($mac_file) && !empty($windows_file))col-md-4 @endif">
 			<h2 class="text-center">{{ $linux_heading }}</h2>
 			<a href="{{ $linux_file }}" class="download-link" download="QuizRoom-Linux">{{ $linux_text }}</a>
 		</section>
+		@endif
 	</div>
+	@endif
 
 @endsection

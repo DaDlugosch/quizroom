@@ -41,6 +41,25 @@
             "delay": 0
         },
         {
+            "key": "field_5c90998206684",
+            "label": "Download nadpis",
+            "name": "download_heading",
+            "type": "text",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "<span class=\"green\">Na<\/span>&nbsp;<span class=\"orange\">stiahnutie<\/span>",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
             "key": "field_5c8ebbbb61ad8",
             "label": "Windows",
             "name": "",
@@ -100,7 +119,7 @@
             "name": "windows_file",
             "type": "file",
             "instructions": "",
-            "required": 1,
+            "required": 0,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
@@ -173,7 +192,7 @@
             "name": "mac_file",
             "type": "file",
             "instructions": "",
-            "required": 1,
+            "required": 0,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
@@ -246,7 +265,7 @@
             "name": "linux_file",
             "type": "file",
             "instructions": "",
-            "required": 1,
+            "required": 0,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
@@ -288,5 +307,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1552858411
+    "modified": 1552982032
 }

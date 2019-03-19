@@ -15,7 +15,7 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "QuizRoom",
+            "default_value": "<span class=\"green\">Quiz<\/span><span class=\"orange\">Room<\/span>",
             "placeholder": "",
             "prepend": "",
             "append": "",
@@ -307,5 +307,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1552982032
+    "modified": 1553023942
 }

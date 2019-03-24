@@ -40,19 +40,19 @@
 		@if(!empty($windows_file))
 		<section class="@if(empty($mac_file) && empty($linux_file))col-md-12 @endif @if((empty($mac_file) && !empty($linux_file)) || (!empty($mac_file) && empty($linux_file)))col-md-6 @endif @if(!empty($mac_file) && !empty($linux_file))col-md-4 @endif">
 			<h2 class="text-center">{{ $windows_heading }}</h2>
-			<a href="{{ $windows_file }}" class="download-link" download="QuizRoom-Win">{{ get_field('windows_text') }}</a>
+			<a href="{{ $windows_file }}" class="download-link" download="QuizRoom-Win.zip">{{ get_field('windows_text') }}</a>
 		</section>
 		@endif
 		@if(!empty($mac_file))
 		<section class="@if(empty($windows_file) && empty($linux_file))col-md-12 @endif @if((empty($windows_file) && !empty($linux_file)) || (!empty($windows_file) && empty($linux_file)))col-md-6 @endif @if(!empty($windows_file) && !empty($linux_file))col-md-4 @endif">
 			<h2 class="text-center">{{ $mac_heading }}</h2>
-			<a href="{{ $mac_file }}" class="download-link" download="QuizRoom-Mac">{{ $mac_text }}</a>
+			<a href="{{ $mac_file }}" class="download-link" download="QuizRoom-MacOS.zip">{{ $mac_text }}</a>
 		</section>
 		@endif
 		@if(!empty($linux_file))
 		<section class="@if(empty($mac_file) && empty($windows_file))col-md-12 @endif @if((!empty($mac_file) && empty($windows_file)) || (!empty($mac_file) && empty($windows_file)))col-md-6 @endif @if(!empty($mac_file) && !empty($windows_file))col-md-4 @endif">
 			<h2 class="text-center">{{ $linux_heading }}</h2>
-			<a href="{{ $linux_file }}" class="download-link" download="QuizRoom-Linux">{{ $linux_text }}</a>
+			<a href="{{ $linux_file }}" class="download-link" download="QuizRoom-Linux.zip">{{ $linux_text }}</a>
 		</section>
 		@endif
 	</div>
